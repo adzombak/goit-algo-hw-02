@@ -22,8 +22,11 @@ def process_requests():
         time.sleep(1)
 
 
-while True:
-    generate_requests()
-    time.sleep(1)
-    process_requests()
-    time.sleep(1)
+try:
+    while True:
+        generate_requests()
+        time.sleep(1)
+        process_requests()
+        time.sleep(1)
+except KeyboardInterrupt:
+    print("Program interrupted by user")
